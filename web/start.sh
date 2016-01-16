@@ -1,3 +1,3 @@
 #!/bin/bash
-service nginx restart
+service nginx start
 exec uwsgi --ini app.ini
