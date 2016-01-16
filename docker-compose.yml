@@ -1,0 +1,11 @@
+web:
+  restart: always
+  build: ./web
+  ports:
+    - 80
+haproxy:
+  image: tutum/haproxy
+  links:
+    - web
+  ports:
+    - 8080:80
